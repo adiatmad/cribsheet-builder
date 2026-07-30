@@ -6,5 +6,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const previewOutput = document.getElementById("preview-output");
-  renderPreview(blocks, previewOutput);
+  const builderOutput = document.getElementById("builder-output");
+
+  // Whenever a block changes (right now: a checkbox toggles),
+  // redraw the preview so the two panels stay in sync.
+  function redrawPreview() {
+    renderPreview(blocks, previewOutput);
+  }
+
+  renderBuilder(blocks, builderOutput, redrawPreview);
+  redrawPreview();
 });
