@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cribsheet Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="panel builder-panel">
+    <h2>Builder</h2>
+    <p class="placeholder">Editing UI comes in the next step — for now the blocks are hard-coded in js/data.js.</p>
+  </div>
+
+  <div class="panel preview-panel">
+    <h2>Live preview</h2>
+    <pre id="preview-output"></pre>
+  </div>
+
+  <!-- Order matters here: data first, then the renderer that uses
+       it, then main.js which calls everything. -->
+  <script src="js/data.js"></script>
+  <script src="js/render-preview.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
