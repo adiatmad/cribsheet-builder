@@ -21,6 +21,18 @@ body {
   font-style: italic;
 }
 
+.block-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.block-row input[type="checkbox"] {
+  margin-top: 0.3rem;
+}
+
 #preview-output {
   white-space: pre-wrap;
   font-family: inherit;
